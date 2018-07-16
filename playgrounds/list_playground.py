@@ -7,6 +7,7 @@ print(courses[-1] == courses[len(courses) - 1])
 print(courses[::-1])
 print(courses[:2])  # same as [0:2]
 print(courses[2:])
+# print(courses[1:-1])
 
 
 courses.append('Art')
