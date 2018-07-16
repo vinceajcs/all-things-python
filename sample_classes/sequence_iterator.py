@@ -4,7 +4,7 @@ class SequenceIterator:
     def __init__(self, sequence):
         """Create an iterator for the given sequence."""
         self._seq = sequence
-        self._i = -1  # will incremenet to 0 on frist call to next
+        self._i = -1  # will incremenet to 0 on first call to next
 
     def __next__(self):
         """Return the next element, or raise StopIteraton error."""
