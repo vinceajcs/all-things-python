@@ -1,20 +1,36 @@
-def binary_search(a_list, target):
-    first = 0
-    last = len(a_list) - 1
+def binary_search(data, target):
+    low = 0
+    high = len(data) - 1
 
-    while first <= last:
+    while low <= high:
+        mid = (low + high) // 2
 
-        i = (first + last) // 2
-
-        item_at_mid = a_list[i]
-
-        if item_at_mid == target:
-            return i
-
-        if item_at_mid < target:
-            first = i + 1
-
-        elif item_at_mid > target:
-            last = i - 1
+        if target == data[mid]:
+            return mid
+        if target < data[mid]:
+            high = mid - 1
+        elif target > data[mid]:
+            low = mid + 1
 
     return -1
+
+
+def binary_search_recursive(data, target, low, high):
+    if low > high:
+        return -1
+    else:
+        mid = (low + high) // 2
+
+        if target == data[mid]:
+            return mid
+        elif target < data[mid]:
+            return binary_search_recurisve(data, target, low, mid - 1)
+        else:
+            return binary_search_recursive(data, target, mid + 1, high)
+
+
+test = [1, 2, 5, 10, 20]
+x = 10
+
+print(binary_search(test, 10))
+print(binary_search_recursive(test, 10, 0, len(test) - 1))
