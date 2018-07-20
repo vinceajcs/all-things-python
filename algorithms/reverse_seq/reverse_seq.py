@@ -20,7 +20,7 @@ def reverse_seq2(S):
 test = [4, 3, 6, 2, 8, 9, 5]
 print(reverse_seq2(test))
 
-print(test)  # test stays the same
+print(test)  # test stays the same after call to reverse_seq2
 
 
 def reverse_seq_iterative(S):
