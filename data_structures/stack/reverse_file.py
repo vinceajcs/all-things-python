@@ -4,7 +4,6 @@ from stack import *
 def reverse_file(filename):
     stack = Stack()
     file = open(filename)
-
     for line in file:
         stack.push(line.rstrip('\n'))
     file.close()

@@ -1,6 +1,6 @@
 class BinaryTree:
-    def __init__(self, root):
-        self.root = root
+    def __init__(self, val):
+        self.val = val
         self.left = None
         self.right = None
 
@@ -27,7 +27,7 @@ class BinaryTree:
         return self.left
 
     def set_root(self, val):
-        self.root = val
+        self.val = val
 
     def get_root(self):
-        return self.root
+        return self.val
