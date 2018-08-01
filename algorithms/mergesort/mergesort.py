@@ -1,44 +1,41 @@
-l = [1, 2, 5]
-k = [3, 4, 6]
-
-xs = [1, 3, 17, 19, 100, 82, 9, 83, 600]
-
-
-def merge_sort(lst):
-    """Sorts the input list using the merge sort algorithm.
-    """
-    if len(lst) <= 1:
-        return lst
-    mid = len(lst) // 2
-    left = merge_sort(lst[:mid])
-    right = merge_sort(lst[mid:])
-    return merge(left, right)
+def merge_sort(S):
+    """Sorts the input list using the merge sort algorithm."""
+    if len(S) <= 1:
+        return S
+    mid = len(S) // 2
+    S1 = merge_sort(S[:mid])
+    S2 = merge_sort(S[mid:])
+    return merge(S1, S2)
 
 
-def merge(xs, ys):
-    """ merge sorted lists xs and ys. Return a sorted result """
+def merge(S1, S2):
+    """Merges two sorted lists into a single sorted list."""
     result = []
-    xi = 0
-    yi = 0
+    i = j = 0
 
     while True:
-        if xi >= len(xs):          # If xs list is finished,
-            result.extend(ys[yi:])  # Add remaining items from ys
-            return result          # And we're done.
+        if i >= len(S1):          # If S1 list is finished,
+            result.extend(S2[j:])  # add remaining items from S2
+            return result
 
-        if yi >= len(ys):          # Same again, but swap roles
-            result.extend(xs[xi:])
+        if j >= len(S2):          # If S2 list is finished
+            result.extend(S1[i:])
             return result
 
         # Both lists still have items, copy smaller item to result.
-        if xs[xi] <= ys[yi]:
-            result.append(xs[xi])
-            xi += 1
+        if S1[i] <= S2[j]:
+            result.append(S1[i])
+            i += 1
         else:
-            result.append(ys[yi])
-            yi += 1
+            result.append(S2[j])
+            j += 1
 
 
-print(merge(l, k))
-
-print(merge_sort(xs))
+def merge_recursive(S1, S2):
+    if not S1:
+        return S2
+    if not S2:
+        return S1
+    if S1[0] < S2[0]:
+        return [S1[0]] + merge(S1[1:], S2)
+    return [S2[0]] + merge(S1, S2[1:])
