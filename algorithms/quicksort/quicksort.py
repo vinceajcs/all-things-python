@@ -13,7 +13,7 @@ def quick_sort(S):
     while not S.is_empty():
         if S.first() < pivot:
             L.enqueue(S.dequeue())
-        elif p < S.first():
+        elif pivot < S.first():
             G.enqueue(S.dequeue())
         else:
             E.enqueue(S.dequeue())
@@ -64,3 +64,42 @@ def inplace_quick_sort(S, a, b):
 
     inplace_quick_sort(S, a, left - 1)
     inplace_quick_sort(S, left + 1, b)
+
+
+def quicksort(data):
+    from collections import deque
+    n = len(data)
+    if n < 2:
+        return data
+
+    # divide
+    data = deque(data)
+    pivot = data[0]
+    L = deque()
+    E = deque()
+    G = deque()
+
+    while data:
+        if data[0] < pivot:
+            L.append(data.popleft())
+        elif pivot < data[0]:
+            G.append(data.popleft())
+        else:
+            E.append(data.popleft())
+
+    # conquer
+    L = quicksort(L)
+    G = quicksort(G)
+
+    while L:
+        data.append(L.popleft())
+    while E:
+        data.append(E.popleft())
+    while G:
+        data.append(G.popleft())
+
+    return data
+
+
+test = [3, 1, 5, 6, 8, 2]
+print(list(quicksort(test)))
