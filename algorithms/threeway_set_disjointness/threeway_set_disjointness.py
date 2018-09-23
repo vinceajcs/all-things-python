@@ -1,6 +1,7 @@
 def disjoint_naive(A, B, C):
     """Return True if no element is common to all three sets.
-    Worst-case O(n^3)."""
+    Worst-case O(n**3).
+    """
     for a in A:
         for b in B:
             for c in C:
@@ -17,9 +18,3 @@ def disjoint_quadratic(A, B, C):
                     if a == c:
                         return False
     return True
-
-# A = [20, 2, 3]
-# B = [40, 5]
-# C = [10, 12, 8, 1]
-#
-# print(disjoint_quadratic(A, B, C))
