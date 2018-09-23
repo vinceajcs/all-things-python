@@ -11,6 +11,9 @@ board = [['o', 'a', 'a', 'n'],
          ['i', 'f', 'l', 'v']]
 
 output: ['oath', 'eat']
+
+Time: O(m*n*l)
+Space: O(l)
 """
 
 
