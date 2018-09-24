@@ -1,4 +1,4 @@
-class TreeNode:
+class Node:
     def __init__(self, data):
         self.data = data
         self.left = None
@@ -29,7 +29,7 @@ class BinaryTree:
         self.root = None
 
     def insert_left(self, item):
-        new = TreeNode(item)
+        new = Node(item)
         node = self.root
 
         if node is None:
@@ -40,7 +40,7 @@ class BinaryTree:
             node.left = new
 
     def insert_right(self, item):
-        new = TreeNode(item)
+        new = Node(item)
         node = self.root
 
         if node is None:
@@ -49,3 +49,7 @@ class BinaryTree:
             while node.right:
                 node = node.right
             node.right = new
+
+    @property
+    def root(self):
+        return self.root
