@@ -27,14 +27,3 @@ def binary_search_recursive(data, target, low, high):
             return binary_search_recurisve(data, target, low, mid - 1)
         else:
             return binary_search_recursive(data, target, mid + 1, high)
-
-
-test = [1, 2, 5, 10, 20]
-x = 10
-y = 100
-
-print(binary_search(test, x))
-print(binary_search_recursive(test, x, 0, len(test) - 1))
-
-print(binary_search(test, y))
-print(binary_search_recursive(test, y, 0, len(test) - 1))
