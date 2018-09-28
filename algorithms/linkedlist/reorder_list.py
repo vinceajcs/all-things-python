@@ -5,7 +5,7 @@ Space: O(1)
 """
 
 
-def reorder(head):
+def reorder_list(head):
     if not head:
         return
 

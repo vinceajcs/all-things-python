@@ -5,7 +5,7 @@ Space: O(1)
 """
 
 
-def delete_duplicates(head):
+def remove_duplicates(head):
     curr = head
     while curr:
         while curr.next and curr.next.val == curr.val:
@@ -20,7 +20,7 @@ Here, we use the pointer p to 'create' the list of distinct nodes.
 """
 
 
-def delete_duplicates(head):
+def remove_duplicates(head):
     dummy = p = Node(0)
     dummy.next = head
     curr = head
