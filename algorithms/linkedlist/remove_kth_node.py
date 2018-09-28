@@ -14,7 +14,7 @@ def remove_kth_node(head, k):
 
     slow, fast = dummy, dummy
 
-    # advance fast pointer to that it is k nodes in front of slow
+    # advance fast pointer so that it is k nodes in front of slow
     for _ in range(k):
         fast = fast.next
 
