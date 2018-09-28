@@ -32,16 +32,17 @@ def is_palindrome(head):
 
 
 def is_palindrome(head):
-        if head is None: return True
+    if head is None:
+        return True
 
-        nodes = []
+    nodes = []
 
-        while head:
-            nodes.append(head.val)
-            head = head.next
+    while head:
+        nodes.append(head.val)
+        head = head.next
 
-        # check if list is equal to its reverse (definition of palindrome)
-        if nodes == nodes: : -1]:
-            return True
+    # check if list is equal to its reverse (definition of palindrome)
+    if nodes == nodes[::-1]:
+        return True
 
-        return False
+    return False
