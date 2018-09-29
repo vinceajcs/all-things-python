@@ -1,10 +1,10 @@
 import re
-from stack import *
 
 
 def eval_postfix(expr):
+    """Evalutes a postfix expression like '56 47 + 2 *'."""
     token_list = re.split("([^0-9])", expr)
-    stack = Stack()
+    stack = []
 
     for token in token_list:
         if token == "" or token == " ":
@@ -19,6 +19,3 @@ def eval_postfix(expr):
             stack.push(int(token))
 
     return stack.pop()
-
-
-print(eval_postfix("56 47 + 2 *"))

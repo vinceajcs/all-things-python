@@ -1,14 +1,11 @@
-from stack import *
-
-
 def reverse_file(filename):
-    stack = Stack()
+    stack = []
     file = open(filename)
     for line in file:
         stack.push(line.rstrip('\n'))
     file.close()
 
     output = open(filename, 'w')
-    while not stack.is_empty():
+    while stack:
         output.write(stack.pop() + '\n')
     output.close()
