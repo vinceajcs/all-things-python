@@ -1,5 +1,4 @@
 class GameEntry:
-
     def __init__(self, name, score):
         self._name = name
         self._score = score
