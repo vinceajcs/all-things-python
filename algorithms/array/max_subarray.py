@@ -1,4 +1,4 @@
-"""Given an integer array nums, find the contiguous subarray which has the largest sum and return its sum.
+"""Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 
 Time: O(n)
 Space: O(1)
