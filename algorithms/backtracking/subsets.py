@@ -1,4 +1,4 @@
-"""Given a set of distinct integers, nums, return all possible subsets, otherwise known as the power set.
+"""Given a list of distinct integers, nums, return all possible subsets, otherwise known as the power set.
 
 Time: O(2**n)
 Space: O(1)
