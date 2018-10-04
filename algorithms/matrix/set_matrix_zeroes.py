@@ -3,6 +3,9 @@
 Idea:
 1. Find out which rows + columns contain 0, and record these in separate sets.
 2. Change all elements in these rows + columns to 0.
+
+Time: O(m*n)
+Space: O(m+n) (for first solution), O(1) for second solution
 """
 
 
