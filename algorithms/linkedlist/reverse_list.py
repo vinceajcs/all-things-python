@@ -46,8 +46,7 @@ def reverse_list(head, m, n):
     for _ in range(n - m + 1):
         curr.next, prev, curr = prev, curr, curr.next
 
-    # link m with n+1, n with m-1
-    p.next.next = curr
-    p.next = prev
+    p.next.next = curr  # link m with n+1
+    p.next = prev  # link m-1 with n
 
     return dummy.next
