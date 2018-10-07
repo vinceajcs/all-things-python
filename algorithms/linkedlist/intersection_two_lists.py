@@ -11,7 +11,7 @@ Similarly, when p2 reaches the end of l2, redirect it to point to the head of l1
 Note: if l1 and l2 intersect, then the last node of each list must be the same.
 
 
-Time: O(m*n)
+Time: O(m+n)
 Space: O(1)
 """
 
