@@ -17,13 +17,11 @@ Input: [[1,2], [2,3]]
 Output: 0
 Explanation: You don't need to remove any of the intervals since they're already non-overlapping.
 
-
 Idea: Find max number of intervals that are non-overlapping.
 The best first interval to keep is the one that ends first, as this interval leaves more room for the rest.
 
 1. Sort intervals by end time, ascending, then traverse intervals to get max number of non-overlapping intervals.
 2. Minimum number of intervals to remove = total intervals - max number of non-overlapping intervals.
-
 
 Time: O(nlogn)
 Space: O(1)
