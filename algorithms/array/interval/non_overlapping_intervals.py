@@ -17,6 +17,7 @@ Input: [[1,2], [2,3]]
 Output: 0
 Explanation: You don't need to remove any of the intervals since they're already non-overlapping.
 
+
 Idea: find max number of intervals that are non-overlapping.
 The best first interval to keep is the one that ends first, as this interval leaves more room for the rest.
 
