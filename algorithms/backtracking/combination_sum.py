@@ -1,5 +1,5 @@
 """Given a list of numbers and a target number, find all unique combinations in the list where the numbers sums to target.
-The same repeated number may be chosen from candidates unlimited number of times.
+The same repeated number may be chosen from candidates an unlimited number of times.
 
 Example 1:
 Input: candidates = [2,3,6,7], target = 7
