@@ -99,7 +99,3 @@ def quicksort(data):
         data.append(G.popleft())
 
     return data
-
-
-test = [3, 1, 5, 6, 8, 2]
-print(list(quicksort(test)))
