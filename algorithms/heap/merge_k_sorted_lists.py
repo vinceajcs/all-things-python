@@ -1,4 +1,4 @@
-"""Merge k sorted linked lists and return it as one sorted list.
+"""Merge k sorted linked lists and return one sorted list.
 
 Idea: Compare k nodes at a time and add the smallest of the k nodes to result.
 Start by comparing the heads of each k lists.
