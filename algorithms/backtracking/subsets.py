@@ -8,14 +8,14 @@ Space: O(1)
 # recursive
 def subsets(nums):
     power_set = []
-    dfs(sorted(nums), 0, [], power_set)
+    backtrack(sorted(nums), 0, [], power_set)
     return power_set
 
 
-def dfs(nums, index, path, result):
+def backtrack(nums, index, path, result):
     result.append(path)
     for i in range(index, len(nums)):
-        dfs(nums, i + 1, path + [nums[i]], result)
+        backtrack(nums, i + 1, path + [nums[i]], result)
 
 
 # iterative
