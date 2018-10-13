@@ -25,11 +25,11 @@ Space: O(k)
 
 def combination_sum(nums, target):
     combinations = []
-    dfs(sorted(nums), target, 0, [], combinations)
+    backtrack(sorted(nums), target, 0, [], combinations)
     return combinations
 
 
-def dfs(nums, target, index, path, combinations):
+def backtrack(nums, target, index, path, combinations):
     if target < 0:
         return
 
@@ -39,4 +39,4 @@ def dfs(nums, target, index, path, combinations):
         return
 
     for i in range(index, len(nums)):
-        dfs(nums, target - nums[i], i, path + [nums[i]], combinations)
+        backtrack(nums, target - nums[i], i, path + [nums[i]], combinations)
