@@ -1,4 +1,4 @@
-"""Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+"""Given a m by n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
 
 We can define sum(i, j) = min sum on a path from upper-left corner to cell (i, j).
 As a result sum(m, n) tells us the min path sum from the upper left cell to lower right cell.
