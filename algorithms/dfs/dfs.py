@@ -4,7 +4,7 @@ def dfs(graph, start):
         vertex = stack.pop()
         if vertex not in visited:
             visited.add(vertex)
-            stack.extend(graph[vertex] - visited)
+            stack.extend(set(graph[vertex]) - visited)
     return visited
 
 
@@ -16,4 +16,4 @@ def dfs_paths(graph, start, end):
             if next == end:
                 yield path + [next]
             else:
-                stack.append((next, path + [next]))
+                stack.append((next, path + [next])
