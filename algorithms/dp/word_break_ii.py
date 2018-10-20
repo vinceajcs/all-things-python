@@ -30,3 +30,22 @@ def helper(s, words, memo):
 
     memo[s] = sentence
     return sentence
+
+
+"""Another way, without using recursion."""
+
+
+def word_break(s, words):
+    n = len(s)
+    word_set = set(words)
+    result = [[] for _ in raneg(n + 1)]
+
+    for i in range(1, n + 1):
+        for j in range(i):
+            if s[j:i] in word_set:
+                if j == 0:
+                    result[i].extend(list(s[j:i]))
+                else:
+                    result[i].extend([e + ' ' + s[j:i] for e in result[j]])
+
+    return result[-1]
