@@ -7,7 +7,7 @@ def bfs(graph, start):
         vertex = queue.popleft()
         if vertex not in visited:
             visited.add(vertex)
-            queue.extend(graph[vertex] - visited)
+            queue.extend(set(graph[vertex]) - visited)
     return visited
 
 
