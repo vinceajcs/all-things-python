@@ -8,6 +8,7 @@ def house_robber(nums):
         return nums[0]
     if len(nums) == 2:
         return max(nums[0], nums[1])
+    # solution either includes first or last house, but cannot include both
     return max(helper(nums[1:]), helper(nums[:-1]))
 
 
