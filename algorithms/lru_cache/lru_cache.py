@@ -25,7 +25,7 @@ class LRUCache:
         self.lookup[key] = value
 
 
-"""Using a dict + doubly LL. We insert from at the tail of the LL and remove from the head."""
+"""Using a dict + doubly LL. We insert at the tail of the LL and remove from the head."""
 
 
 class Node:
