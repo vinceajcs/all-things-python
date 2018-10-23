@@ -1,7 +1,7 @@
 """Given a non negative integer number, calculate the number of 1's in the binary representation for every number i in the range 0 ≤ i ≤ n and return them as a list.
 
 Time: O(n)
-Space: O(n)
+Space: O(1)
 """
 
 
