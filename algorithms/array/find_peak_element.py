@@ -37,10 +37,10 @@ def find_peak(nums):
             # found peak
             return mid
         elif nums[mid] < nums[mid + 1]:
-            # search left half
+            # search right half
             l = mid + 1
         else:
-            # search right half
+            # search left half
             r = mid - 1
 
     return l
