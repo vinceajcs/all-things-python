@@ -1,4 +1,4 @@
-"""Using increasing #s as codes."""
+"""Using increasing integers as codes."""
 
 
 class TinyURL:
@@ -14,7 +14,7 @@ class TinyURL:
 
 
 """Better way, using a random code of six digit/letter combinations.
-If a longURL is already stored, use existing shortURL.
+If a long url is already stored, use the existing short url.
 """
 
 
