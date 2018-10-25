@@ -1,6 +1,9 @@
+import random
+
+
 def quick_select(S, k):
     """Returns the kth smallest element of list S, for k from 1 to len(S)."""
-    if len(S) == 0:
+    if len(S) == 1:
         return S[0]
 
     pivot = random.choice(S)
@@ -8,7 +11,7 @@ def quick_select(S, k):
     E = [x for x in S if x == pivot]
     G = [x for x in S if x > pivot]
 
-    if k <= len(G):
+    if k <= len(L):
         return quick_select(L, k)
     elif k <= len(L) + len(E):
         return pivot
