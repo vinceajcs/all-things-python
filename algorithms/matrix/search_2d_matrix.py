@@ -18,7 +18,7 @@ Space: O(1)
 
 
 def search_matrix(matrix, target):
-    flattened = [x for l in matrix for x in l]
+    flattened = [x for row in matrix for x in row]
 
     l, r = 0, len(flattened) - 1
 
