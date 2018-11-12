@@ -12,15 +12,23 @@ Space: O(n)
 
 
 def build_tree(preorder, inorder):
-    if inorder:
+
+    def helper(preorder, inorder):
+        if not inorder:
+            return None
+
         # first element in preorder should be the root node, and then we find root within inorder
-        root_index = inorder.index(preorder.pop(0))
-        root = Node(inorder[root_index])
-        # split into two subproblems
-        root.left = build_tree(preorder, inorder[:root_index])
-        root.right = build_tree(preorder, inorder[root_index + 1:])
+        root_val = preorder.popleft()
+        root = Node(root_val)
+        root_index = inorder.index(root_val)
+
+        # split into two subproblems, left and right subtrees
+        root.left = helper(preorder, inorder[:root_index])
+        root.right = helper(preorder, inorder[root_index + 1:])
 
         return root
+
+    return helper(deque(preorder), inorder)
 
 
 """Another way using a dict."""
