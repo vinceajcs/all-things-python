@@ -1,4 +1,4 @@
-class Queue(object):
+class Queue:
     """Implement a queue using stacks."""
 
     def __init__(self):
