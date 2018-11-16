@@ -62,7 +62,7 @@ def helper(root, lookup):
 
 def rob(root):
     result = helper(root)
-    # result[0] = max money if root is not robbed, whereas result[1] = max money is root is robbed
+    # result[0] = max money if root is not robbed, whereas result[1] = max money if root is robbed
     return max(result[0], result[1])
 
 
