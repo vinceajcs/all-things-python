@@ -33,7 +33,7 @@ def dfs(matrix, cache, i, j, m, n):
     directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
     for direction in directions:
         x, y = i + direction[0], j + direction[1]
-        if x < 0 or x >= m or y < 0 or y >= or matrix[x][y] <= matrix[i][j]:
+        if x < 0 or x >= m or y < 0 or y >= n or matrix[x][y] <= matrix[i][j]:
             continue
 
         path = 1 + dfs(matrix, cache, x, y, m, n)
