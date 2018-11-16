@@ -5,7 +5,7 @@ Each transformed word must exist in the dictionary.
 We can model this as a shortest paths between two nodes problem.
 We can use BFS to get the shortest path from the source node (begin word) to the end word node.
 
-Time: O(L*n)
+Time: O(n*l), where l is the average length of the strings and n is the total number of strings
 Space: O(n)
 """
 
