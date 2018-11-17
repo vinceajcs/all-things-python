@@ -1,4 +1,4 @@
-"""Given a binary tree, find the lowest common ancestor of two given nodes in the BST.
+"""Given a binary tree, find the lowest common ancestor of two given nodes in the binary tree.
 
 Idea:
 1. If the current subtree contains both p and q,
