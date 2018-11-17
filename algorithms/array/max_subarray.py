@@ -29,8 +29,9 @@ def max_subarray(nums):
 
 """Use Kadane's algorithm.
 
-Idea: the max subarray sum ending at index i either includes the max subarray sum ending at i-1, or it doesn't.
-This can be expressed as max[i] = max(nums[i], max[i-1] + nums[i]).
+Idea: The max subarray sum ending at index i either:
+(1) contains the element at index i
+(2) contains the subarray that ends at position i-1, followed by the element at index i
 """
 
 
