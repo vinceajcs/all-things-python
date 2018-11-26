@@ -1,7 +1,7 @@
 """Given two strings s and t , write a function to determine if t is an anagram of s.
 
-Idea: two strings are considered anagrams of each other if they have the same frequency of each character.
-Thus, we can use two dicts to count the number of chars in each string and see if the dicts are equal.
+Idea: Two strings are considered anagrams of each other if they have the same frequency of each character.
+Thus, we can use two dicts to count the number of chars in each string and check if the dicts are equal.
 
 Time: O(n)
 Space: O(1)
@@ -17,7 +17,7 @@ def is_anagram(s, t):
 
     counter_s, counter_t = Counter(s), Counter(t)
 
-    # could altneratively just return counter_s == counter_t here without any of the code below
+    # could alternatively return counter_s == counter_t here without any of the code below
 
     for key, value in counter_s.items():
         if counter_t[key] != value:
