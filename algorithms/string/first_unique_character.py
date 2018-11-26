@@ -1,4 +1,5 @@
-"""Given a string, find the first unique character in it and return its index. If a unique character doesn't exist, return -1.
+"""Given a string, find the first unique character in it and return its index.
+If a unique character doesn't exist, return -1.
 
 Time: O(n)
 Space: O(n)
