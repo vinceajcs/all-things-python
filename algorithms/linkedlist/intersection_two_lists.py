@@ -1,11 +1,8 @@
-"""Find the node at which the intersection of two singly linked lists begins.
-Assume there are no cycles.
+"""Find the node at which the intersection of two singly linked lists begins. Assume there are no cycles.
 
 Idea: Use two pointers, p1 and p2 to traverse the lists l1 and l2, respectively.
-
 1. When p1 reaches the end of l1, redirect it to point to the head of l2.
 Similarly, when p2 reaches the end of l2, redirect it to point to the head of l1.
-
 2. If at any point p1 = p2 (both point to same node), then p1/p2 is the intersection node.
 
 Note: if l1 and l2 intersect, then the last node of each list must be the same.
