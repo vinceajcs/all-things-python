@@ -1,3 +1,10 @@
+"""Given two binary trees, check if they are the same or not.
+
+Time: O(n)
+Space: O(h)
+"""
+
+
 # recursive
 def is_same(p, q):
     if p and q:
