@@ -2,24 +2,25 @@
 
 
 def serialize(root):
-
-    def build_string(node):
+    # serialize using preorder
+    def preorder(node):
         if node:
             nodes.append(str(node.val))
-            build_string(node.left)
-            build_string(node.right)
+            preorder(node.left)
+            preorder(node.right)
         else:
             nodes.append('#')
 
     nodes = []
-    nodes = build_string(root)
+    preorder(root)
     return ' '.join(nodes)
 
 
-def deserialize(root):
-
+def deserialize(data):
+    # use an iterator
     def build_tree():
         node = next(nodes)
+
         if node == '#':
             return None
 
