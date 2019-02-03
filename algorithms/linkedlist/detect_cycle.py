@@ -9,7 +9,7 @@ Space: O(1)
 
 
 def detect_cycle(head):
-    if not head or head.next:
+    if not head:
         return False
 
     fast, slow = head, head
