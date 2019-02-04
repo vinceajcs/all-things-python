@@ -1,4 +1,5 @@
 """Given two binary trees, check if they are the same or not.
+Two trees are defined to be the same if they are structurally identical and the nodes have the same value.
 
 Time: O(n)
 Space: O(h)
@@ -23,7 +24,7 @@ def is_same(p, q):
         if n1 and n2 and n1.val == n2.val:
             stack.append((n1.right, n2.right))
             stack.append((n1.left, n2.left))
-        elif not n1 and n2:
+        elif not n1 and not n2:
             continue
         else:
             return False
