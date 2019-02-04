@@ -9,30 +9,34 @@ Space: O(h)
 
 # recursive
 def is_subtree(s, t):
-    if is_same(s, t):
-        return True
     if not s:
         return False
+
+    if is_same(s, t):
+        return True
+
     return is_subtree(s.left, t) or is_subtree(s.right, t)
 
 
-# iterative
+# iterative - BFS
 def is_subtree(s, t):
-    is_subtree = False
+    if not s:
+        return False
 
-    queue = collections.deque([])
-    queue.append(s)
+    queue = collections.deque([s])
 
     while queue:
         node = queue.popleft()
-        if node.val == t.val:
-            is_subtree = is_same(node, t)
-            break
-        else:
+
+        if is_same(node, t):
+            return True
+
+        if node.left:
             queue.append(node.left)
+        if node.right:
             queue.append(node.right)
 
-    return is_subtree
+    return False
 
 
 def is_same(s, t):
