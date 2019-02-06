@@ -1,16 +1,31 @@
+"""Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
+
+For example, this binary tree [1,2,2,3,4,4,3] is symmetric:
+
+    1
+   / \
+  2   2
+ / \ / \
+3  4 4  3
+
+Time: O(n)
+Space: O(h)
+"""
+
+
 # recursive solution
 def is_symmetric(root):
-    if root is None:
+    if not root:
         return True
 
     return helper(root.left, root.right)
 
 
 def helper(left, right):
-    if left is None and right is None:
+    if not left and not right:
         return True
 
-    if left is None or right is None or left.val != right.val:
+    if not left or not right or left.val != right.val:
         return False
 
     return helper(left.left, right.right) and helper(left.right, right.left)
@@ -18,7 +33,7 @@ def helper(left, right):
 
 # iterative solution
 def is_symmetric(root):
-    if root is None:
+    if not root:
         return True
 
     stack = []
@@ -26,17 +41,18 @@ def is_symmetric(root):
     stack.append(root.right)
 
     while stack:
-        p, q = stack.pop(), stack.pop()
+        left, right = stack.pop(), stack.pop()
 
-        if p is None and q is None:
+        if not left and not right:
             continue
-        if p is None or q is None or p.val != q.val:
+
+        if not left or not right or left.val != right.val:
             return False
 
-        stack.append(p.left)
-        stack.append(q.right)
+        stack.append(left.left)
+        stack.append(right.right)
 
-        stack.append(p.right)
-        stack.append(q.left)
+        stack.append(left.right)
+        stack.append(right.left)
 
     return True
