@@ -1,4 +1,4 @@
-"""Given two strings s and t , write a function to determine if t is an anagram of s.
+"""Given two strings s and t, write a function to determine if t is an anagram of s.
 
 Idea: Two strings are considered anagrams of each other if they have the same frequency of each character.
 Thus, we can use two dicts to count the number of chars in each string and check if the dicts are equal.
