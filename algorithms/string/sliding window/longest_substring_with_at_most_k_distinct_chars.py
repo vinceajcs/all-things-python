@@ -1,6 +1,6 @@
 """Given a string, find the length of the longest substring that contains at most k distinct characters.
 
-Idea: Sliding window with a dict. Use left and right pointer track window.
+Idea: Sliding window with a dict. Use left and right pointers to define a window.
 1. Advance right pointer, one char at a time, until it reaches the end of the string.
 2. At each iteration of the right pointer, if there are more than k distinct chars, move left pointer to remove chars in current window.
 
